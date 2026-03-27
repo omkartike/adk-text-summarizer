@@ -78,12 +78,13 @@ This project demonstrates the implementation of a single AI agent using Google's
 🎓 Educational: Perfect for learning ADK, Cloud Run, and AI agent architecture<br>
 
 🏗️ Architecture<br>
-┌─────────────────┐<br>     HTTP Request   <br>  ┌──────────────────┐
-│                 │<br> ──────────────────><br> │                  │
-│   Client /      │<br>                    <br>  │   Google Cloud   │
-│   Browser       │<br>  <─────────────────<br>  │      Run         │
-│                 │<br>    JSON Response   <br> │  (ADK Agent)     │
-└─────────────────┘<br>                    <br>  └────────┬─────────┘
+```text
+┌─────────────────┐     HTTP Request   ┌──────────────────┐
+│                 │ ──────────────────>│                  │
+│   Client /      │                    │   Google Cloud   │
+│   Browser       │  <─────────────────│      Run         │
+│                 │    JSON Response   │  (ADK Agent)     │
+└─────────────────┘                    └────────┬─────────┘
                                                  │
                                                  │ API Call
                                                  │<br>
@@ -94,6 +95,7 @@ This project demonstrates the implementation of a single AI agent using Google's
                                           │   (Vertex AI)│
                                           │              │
                                           └──────────────┘
+```
 Flow Description-<br>
 
 1) User sends HTTP POST request with text to summarize<br>
