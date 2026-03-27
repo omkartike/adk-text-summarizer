@@ -45,6 +45,10 @@ This project demonstrates the implementation of a single AI agent using Google's
 
 
 📸 Live Demo Screenshots
+<img width="1907" height="925" alt="gen-ai-apac-project4" src="https://github.com/user-attachments/assets/ee641819-1d99-46b4-ae33-a637861f56ce" />
+<img width="1918" height="1078" alt="gen-ai-apac-project5" src="https://github.com/user-attachments/assets/95aaef60-4837-4911-b13a-0ef4c616544f" />
+<img width="1918" height="1078" alt="gen-ai-apac-project6" src="https://github.com/user-attachments/assets/f9db14ca-dd45-4dc0-bbfa-817994eeb166" />
+<img width="1918" height="1078" alt="gen-ai-apac-project7" src="https://github.com/user-attachments/assets/702d258e-64f3-4ed4-b5ae-81bf5feb2931" />
 
 
 
