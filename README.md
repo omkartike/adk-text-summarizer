@@ -8,41 +8,41 @@ Text summarization AI agent built with Google ADK + Gemini 2.5 Flash for Gen AI 
 
 A production-ready AI agent built with Google's Agent Development Kit (ADK) that performs text summarization using Gemini, deployed on Google Cloud Run with an HTTP endpoint.
 
-🎓 Gen AI Academy APAC Edition Project Submission
+🎓 Gen AI Academy APAC Edition Project Submission<br>
 ⭐ Showcased on GitHub for portfolio purposes
 
 </div>
 
 📖 Table of Contents
-Overview
-Features
-Architecture
-Tech Stack
-Project Structure
-Prerequisites
-Installation & Setup
-Deployment Steps
-How to Use
-Testing
-API Documentation
-Screenshots
-Troubleshooting
-Future Enhancements
-Credits & References
-License
-Contact
+Overview<br>
+Features<br>
+Architecture<br>
+Tech Stack<br>
+Project Structure<br>
+Prerequisites<br>
+Installation & Setup<br>
+Deployment Steps<br>
+How to Use<br>
+Testing<br>
+API Documentation<br>
+Screenshots<br>
+Troubleshooting<br>
+Future Enhancements<br>
+Credits & References<br>
+License<br>
+Contact<br>
 
 🎯 Overview
 This project demonstrates the implementation of a single AI agent using Google's Agent Development Kit (ADK) that performs text summarization using the Gemini 2.5 Flash model. The agent is deployed on Google Cloud Run and is callable via an HTTP endpoint, returning valid responses for given text inputs.
 
 
 *LIVE DEMO SECTION -->>>>
-```bash
+
 ## 🎯 **Live Demo**
 **[https://text-summarizer-agent-863588964400.asia-south1.run.app](https://text-summarizer-agent-863588964400.asia-south1.run.app)**
 
 **Status: 100% Production Ready! ✅ Tested live - works perfectly!**
-```
+
 
 📸 Live Demo Screenshots
 
