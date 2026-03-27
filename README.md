@@ -130,13 +130,10 @@ Required Accounts & Services
 Now lets come to the commands section ->>>
 
 Enable Required APIs
-bash
-gcloud services enable \
-  run.googleapis.com \
-  artifactregistry.googleapis.com \
-  cloudbuild.googleapis.com \
-  aiplatform.googleapis.com \
-  compute.googleapis.com
+```bash
+git clone https://github.com/your-username/text-summarizer-agent.git
+cd text-summarizer-agent
+```
 
   🚀 Installation & Setup
 Step 1: Clone the Repository
