@@ -86,7 +86,7 @@ This project demonstrates the implementation of a single AI agent using Google's
 └─────────────────┘                      └────────┬─────────┘
                                                  │
                                                  │ API Call
-                                                 │
+                                                 │<br>
                                           ┌──────▼───────┐
                                           │              │
                                           │   Gemini     │
@@ -94,7 +94,7 @@ This project demonstrates the implementation of a single AI agent using Google's
                                           │   (Vertex AI)│
                                           │              │
                                           └──────────────┘
-Flow Description-
+Flow Description-<br>
 
 1) User sends HTTP POST request with text to summarize<br>
 2)Cloud Run receives request and routes to ADK agent<br>
@@ -143,16 +143,16 @@ Required Accounts & Services<br>
 ✅ Python 3.11+ installed<br>
 
 🚀 Future Enhancements<br>
-Potential improvements for future versions:<br>
-Add support for multiple summarization styles (brief, detailed, bullet points)<br>
-Implement text length-based routing (short vs. long texts)<br>
-Add sentiment analysis alongside summarization<br>
-Support file uploads (PDF, DOCX summarization)<br>
-Implement caching for repeated texts<br>
-Add usage analytics dashboard<br>
-Multi-language summarization support<br>
-Batch processing for multiple texts<br>
-Integration with Google Drive/Docs<br>
+1->Potential improvements for future versions:<br>
+2->Add support for multiple summarization styles (brief, detailed, bullet points)<br>
+3->Implement text length-based routing (short vs. long texts)<br>
+4->Add sentiment analysis alongside summarization<br>
+5->Support file uploads (PDF, DOCX summarization)<br>
+6->Implement caching for repeated texts<br>
+7->Add usage analytics dashboard<br>
+8->Multi-language summarization support<br>
+9->Batch processing for multiple texts<br>
+10->Integration with Google Drive/Docs<br>
 
 Now lets come to the commands section ->>><br>
 
@@ -301,46 +301,46 @@ Summary maintains original meaning
 Response time < 5 seconds
 Invalid input returns appropriate error message
 
-🙏 Credits & References -->>
-*[Official Documentation](https://google.github.io/adk-docs/)
-*[Google Agent Development Kit (ADK) Docs]()
-*[ADK Cloud Run Deployment Guide](https://google.github.io/adk-docs/deploy/cloud-run/)
-*[Gemini API Documentation](https://ai.google.dev/gemini-api/docs)
-*[Cloud Run Documentation](https://cloud.google.com/run)
+🙏 Credits & References -->><br>
+*[Official Documentation](https://google.github.io/adk-docs/)<br>
+*[Google Agent Development Kit (ADK) Docs](https://docs.cloud.google.com/agent-builder/agent-development-kit/overview)<br>
+*[ADK Cloud Run Deployment Guide](https://google.github.io/adk-docs/deploy/cloud-run/)<br>
+*[Gemini API Documentation](https://ai.google.dev/gemini-api/docs)<br>
+*[Cloud Run Documentation](https://cloud.google.com/run)<br>
 
-Tutorials & Codelabs -->>
-*[Build and Deploy ADK Agent on Cloud Run](https://codelabs.developers.google.com/codelabs/production-ready-ai-with-gc/5-deploying-agents/deploy-an-adk-agent-to-cloud-run#0)
-*[Building AI Agents with ADK: The Foundation](https://codelabs.developers.google.com/devsite/codelabs/build-agents-with-adk-foundation#9)
+Tutorials & Codelabs -->><br>
+*[Build and Deploy ADK Agent on Cloud Run](https://codelabs.developers.google.com/codelabs/production-ready-ai-with-gc/5-deploying-agents/deploy-an-adk-agent-to-cloud-run#0)<br>
+*[Building AI Agents with ADK: The Foundation](https://codelabs.developers.google.com/devsite/codelabs/build-agents-with-adk-foundation#9)<br>
 
-#Important ->
+#Important -><br>
 Gen AI Academy APAC Edition - This project was created as part of the Google Gen AI Academy APAC program
 Inspired by Google's best practices for AI agent development and deployment and its a part of module that we have to provide project in order to complete it.
 
-📬 Contact
-Author: Om Kartike
-Email: omkartikk2910@outlook.com
-GitHub: [@omkartike](https://github.com/omkartike)
-Location: Delhi,New Delhi,India-110059
-Currently: Computer Science Student 
+📬 Contact<br>
+Author: Om Kartike<br>
+Email: omkartikk2910@outlook.com<br>
+GitHub: [@omkartike](https://github.com/omkartike)<br>
+Location: Delhi,New Delhi,India-110059<br>
+Currently: Computer Science Student <br>
 
-Let's Connect!
-💼 LinkedIn: [Om Kartike](https://www.linkedin.com/in/om-kartike)
-🐙 GitHub: [@omkartike](https://github.com/omkartike)
-📧 Email: omkartik2910@gmail.com ---->> alternate email
+Let's Connect!<br>
+💼 LinkedIn: [Om Kartike](https://www.linkedin.com/in/om-kartike)<br>
+🐙 GitHub: [@omkartike](https://github.com/omkartike)<br>
+📧 Email: omkartik2910@gmail.com ---->> alternate email<br>
 
-🎓 Google Gen AI Academy APAC Participant
+🎓 Google Gen AI Academy APAC Participant<br>
 
-⭐ Show Your Support
-If this project helped you learn about AI agents, ADK, or Cloud Run:
-⭐ Star this repository (it helps others find it!)
-🍴 Fork it and build your own version
-📢 Share it with your network
-💬 Leave feedback in the issues section
+⭐ Show Your Support<br>
+If this project helped you learn about AI agents, ADK, or Cloud Run:<br>
+⭐ Star this repository (it helps others find it!)<br>
+🍴 Fork it and build your own version<br>
+📢 Share it with your network<br>
+💬 Leave feedback in the issues section<br>
 
 <div align="center">
 
-Made with ❤️ using Google ADK, Gemini, and Cloud Run
-🎓 Part of Google Gen AI Academy APAC Edition 2026
+Made with ❤️ using Google ADK, Gemini, and Cloud Run<br>
+🎓 Part of Google Gen AI Academy APAC Edition 2026<br>
 
 </div>
 
