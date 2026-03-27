@@ -35,6 +35,21 @@ Contact
 🎯 Overview
 This project demonstrates the implementation of a single AI agent using Google's Agent Development Kit (ADK) that performs text summarization using the Gemini 2.5 Flash model. The agent is deployed on Google Cloud Run and is callable via an HTTP endpoint, returning valid responses for given text inputs.
 
+
+*LIVE DEMO SECTION -->>>>
+```bash
+## 🎯 **Live Demo**
+**[https://text-summarizer-agent-863588964400.asia-south1.run.app](https://text-summarizer-agent-863588964400.asia-south1.run.app)**
+
+**Status: 100% Production Ready! ✅ Tested live - works perfectly!**
+```
+
+📸 Live Demo Screenshots
+
+
+
+
+
 ✅ Project Requirements Met
 | Requirement                 | Status                                |
 | --------------------------- | ------------------------------------- |
@@ -99,7 +114,7 @@ Flow Description-
 | Registry       | Artifact Registry | Container image storage        |
 | CI/CD          | Cloud Build       | Automated deployment           |
 
-📁 Project Structure -
+📁 Production File Structure ->>>
 text_summarizer_agent/
 ├── .env                      # Environment variables (API key, model)
 ├── requirements.txt          # Python dependencies
@@ -127,16 +142,209 @@ Required Accounts & Services
 
 ✅ Python 3.11+ installed
 
+🚀 Future Enhancements
+Potential improvements for future versions:
+Add support for multiple summarization styles (brief, detailed, bullet points)
+Implement text length-based routing (short vs. long texts)
+Add sentiment analysis alongside summarization
+Support file uploads (PDF, DOCX summarization)
+Implement caching for repeated texts
+Add usage analytics dashboard
+Multi-language summarization support
+Batch processing for multiple texts
+Integration with Google Drive/Docs
+
 Now lets come to the commands section ->>>
+
+  🚀 Installation & Setup
+Step 1: In Cloud terminal set up your project using following command ->
+```bash
+gcloud config set project [PROJECT_ID]
+```
 
 Enable Required APIs
 ```bash
-git clone https://github.com/your-username/text-summarizer-agent.git
-cd text-summarizer-agent
+gcloud services enable \
+  run.googleapis.com \
+  artifactregistry.googleapis.com \
+  cloudbuild.googleapis.com \
+  aiplatform.googleapis.com \
+  compute.googleapis.com
 ```
+Step 2: Set Up Virtual Environment (Recommended)
+```bash
+cd && mkdir text_summarizer_agent && cd text_summarizer_agent
+```
+Step 3: Install the requirements 
+```bash
+cloudshell edit requirements.txt
+```
+After creating requirements txt add the following code to it ->>
+```bash
+google-adk==1.14.0
+langchain-community==0.3.27
+wikipedia==1.4.0
+```
+Next step -> in terminal create a virtual environment using the below mentioned command ->
+```bash
+uv venv
+source .venv/bin/activate
+```
+Step 4: Configure Environment Variables
+Create a .env file in the root directory:
+Using the below command your env file will be created.
+```bash
+# 1. Set the variables in your terminal first
+PROJECT_ID=$(gcloud config get-value project)
+PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format="value(projectNumber)")
+SA_NAME=lab2-cr-service
 
-  🚀 Installation & Setup
-Step 1: Clone the Repository
-bash
-git clone https://github.com/your-username/text-summarizer-agent.git
-cd text-summarizer-agent
+# 2. Create the .env file using those variables
+cat <<EOF > .env
+PROJECT_ID=$PROJECT_ID
+PROJECT_NUMBER=$PROJECT_NUMBER
+SA_NAME=$SA_NAME
+SERVICE_ACCOUNT=${SA_NAME}@${PROJECT_ID}.iam.gserviceaccount.com
+MODEL="gemini-2.5-flash"
+EOF
+```
+Step 5: Creating the workflow for agent to work --->>
+Copy Paste following command in your terminal to create the agent.py file
+```bash
+import os
+from dotenv import load_dotenv
+from google.adk import Agent
+
+load_dotenv()
+model_name = os.getenv("MODEL", "gemini-2.5-flash")
+
+# 🧠 Summarizer Agent (FIXED - no {text}!)
+summarizer_agent = Agent(
+    name="text_summarizer",
+    model=model_name,
+    description="Text summarization specialist",
+    instruction="""
+You are an expert text summarization assistant.
+
+Your job: Take any input message and summarize it into 2-4 clear sentences.
+
+RULES:
+- Capture only MAIN IDEAS
+- Remove fluff, examples, repetition  
+- Keep original meaning
+- Natural, readable output
+
+Always respond with a summary of whatever text the user provides.
+    """,
+    output_key="summary"
+)
+
+# 🚪 Root Agent (routes to summarizer)
+root_agent = Agent(
+    name="summarizer_root",
+    model=model_name,
+    description="Text summarization service entry point",
+    instruction="""
+Welcome to Text Summarizer Pro! 🚀
+
+Send me any text, article, email, or document and I'll summarize it perfectly.
+
+Just paste your text and I'll create a concise 2-4 sentence summary.
+
+Examples of what to summarize:
+- News articles
+- Research papers  
+- Meeting notes
+- Long emails
+
+When user sends text → transfer to text_summarizer immediately.
+    """,
+    sub_agents=[summarizer_agent]
+)
+
+__all__ = ["root_agent"]
+```
+This will finnaly create our main working agent that will perform tasks 
+
+Step 6: Deplyoment --->>
+Make sure your file looks like this 
+```bash
+text_summarizer_agent/
+├── .env
+├── __init__.py
+├── agent.py
+└── requirements.txt
+```
+#Now finnaly deploy your agent using ADK CLI
+enter the following command ->>
+```bash
+uvx --from google-adk==1.14.0 \
+adk deploy cloud_run \
+  --project=$PROJECT_ID \
+  --region=asia-south1 \
+  --service_name=text_summarizer_agent \
+  --with_ui \
+  . \
+  -- \
+  --labels=dev-apac-2026-track1-project \
+  --service-account=$SERVICE_ACCOUNT
+```
+Then you will be prompted with 2 new commands just simply type "Y" and press enter after that your deployment process will start.
+
+Last Step : Test the deployed agent 
+#Manual Testing Checklist
+
+Agent responds to "Hello" greeting
+Long text (500+ words) is summarized to 2-4 sentences
+Short text is rephrased concisely
+Summary maintains original meaning
+Response time < 5 seconds
+Invalid input returns appropriate error message
+
+🙏 Credits & References -->>
+*[Official Documentation](https://google.github.io/adk-docs/)
+*[Google Agent Development Kit (ADK) Docs]()
+*[ADK Cloud Run Deployment Guide](https://google.github.io/adk-docs/deploy/cloud-run/)
+*[Gemini API Documentation](https://ai.google.dev/gemini-api/docs)
+*[Cloud Run Documentation](https://cloud.google.com/run)
+
+Tutorials & Codelabs -->>
+*[Build and Deploy ADK Agent on Cloud Run](https://codelabs.developers.google.com/codelabs/production-ready-ai-with-gc/5-deploying-agents/deploy-an-adk-agent-to-cloud-run#0)
+*[Building AI Agents with ADK: The Foundation](https://codelabs.developers.google.com/devsite/codelabs/build-agents-with-adk-foundation#9)
+
+#Important ->
+Gen AI Academy APAC Edition - This project was created as part of the Google Gen AI Academy APAC program
+Inspired by Google's best practices for AI agent development and deployment and its a part of module that we have to provide project in order to complete it.
+
+📬 Contact
+Author: Om Kartike
+Email: omkartikk2910@outlook.com
+GitHub: [@omkartike](https://github.com/omkartike)
+Location: Delhi,New Delhi,India-110059
+Currently: Computer Science Student 
+
+Let's Connect!
+💼 LinkedIn: [Om Kartike](https://www.linkedin.com/in/om-kartike)
+🐙 GitHub: [@omkartike](https://github.com/omkartike)
+📧 Email: omkartik2910@gmail.com ---->> alternate email
+
+🎓 Google Gen AI Academy APAC Participant
+
+⭐ Show Your Support
+If this project helped you learn about AI agents, ADK, or Cloud Run:
+⭐ Star this repository (it helps others find it!)
+🍴 Fork it and build your own version
+📢 Share it with your network
+💬 Leave feedback in the issues section
+
+<div align="center">
+
+Made with ❤️ using Google ADK, Gemini, and Cloud Run
+🎓 Part of Google Gen AI Academy APAC Edition 2026
+
+</div>
+
+
+
+
+
