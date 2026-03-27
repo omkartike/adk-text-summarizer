@@ -13,7 +13,7 @@ A production-ready AI agent built with Google's Agent Development Kit (ADK) that
 
 </div>
 
-📖 Table of Contents
+📖 Table of Contents<br>
 1->Overview<br>
 2->Features<br>
 3->Architecture<br>
@@ -78,12 +78,12 @@ This project demonstrates the implementation of a single AI agent using Google's
 🎓 Educational: Perfect for learning ADK, Cloud Run, and AI agent architecture<br>
 
 🏗️ Architecture<br>
-┌─────────────────┐     HTTP Request     ┌──────────────────┐
-│                 │  ──────────────────> │                  │
-│   Client /      │                      │   Google Cloud   │
-│   Browser       │  <─────────────────  │      Run         │
-│                 │     JSON Response    │  (ADK Agent)     │
-└─────────────────┘                      └────────┬─────────┘
+┌─────────────────┐<br>     HTTP Request   <br>  ┌──────────────────┐
+│                 │<br> ──────────────────><br> │                  │
+│   Client /      │<br>                    <br>  │   Google Cloud   │
+│   Browser       │<br>  <─────────────────<br>  │      Run         │
+│                 │<br>    JSON Response   <br> │  (ADK Agent)     │
+└─────────────────┘<br>                    <br>  └────────┬─────────┘
                                                  │
                                                  │ API Call
                                                  │<br>
@@ -302,31 +302,31 @@ Response time < 5 seconds
 Invalid input returns appropriate error message
 
 🙏 Credits & References -->><br>
-*[Official Documentation](https://google.github.io/adk-docs/)<br>
-*[Google Agent Development Kit (ADK) Docs](https://docs.cloud.google.com/agent-builder/agent-development-kit/overview)<br>
-*[ADK Cloud Run Deployment Guide](https://google.github.io/adk-docs/deploy/cloud-run/)<br>
-*[Gemini API Documentation](https://ai.google.dev/gemini-api/docs)<br>
-*[Cloud Run Documentation](https://cloud.google.com/run)<br>
+1->[Official Documentation](https://google.github.io/adk-docs/)<br>
+2->[Google Agent Development Kit (ADK) Docs](https://docs.cloud.google.com/agent-builder/agent-development-kit/overview)<br>
+3->[ADK Cloud Run Deployment Guide](https://google.github.io/adk-docs/deploy/cloud-run/)<br>
+4->[Gemini API Documentation](https://ai.google.dev/gemini-api/docs)<br>
+5->[Cloud Run Documentation](https://cloud.google.com/run)<br>
 
 Tutorials & Codelabs -->><br>
-*[Build and Deploy ADK Agent on Cloud Run](https://codelabs.developers.google.com/codelabs/production-ready-ai-with-gc/5-deploying-agents/deploy-an-adk-agent-to-cloud-run#0)<br>
-*[Building AI Agents with ADK: The Foundation](https://codelabs.developers.google.com/devsite/codelabs/build-agents-with-adk-foundation#9)<br>
+1->[Build and Deploy ADK Agent on Cloud Run](https://codelabs.developers.google.com/codelabs/production-ready-ai-with-gc/5-deploying-agents/deploy-an-adk-agent-to-cloud-run#0)<br>
+2->[Building AI Agents with ADK: The Foundation](https://codelabs.developers.google.com/devsite/codelabs/build-agents-with-adk-foundation#9)<br>
 
 #Important -><br>
 Gen AI Academy APAC Edition - This project was created as part of the Google Gen AI Academy APAC program
 Inspired by Google's best practices for AI agent development and deployment and its a part of module that we have to provide project in order to complete it.
 
 📬 Contact<br>
-Author: Om Kartike<br>
-Email: omkartikk2910@outlook.com<br>
-GitHub: [@omkartike](https://github.com/omkartike)<br>
-Location: Delhi,New Delhi,India-110059<br>
-Currently: Computer Science Student <br>
+->Author: Om Kartike<br>
+->Email: omkartikk2910@outlook.com<br>
+->GitHub: [@omkartike](https://github.com/omkartike)<br>
+->Location: Delhi,New Delhi,India-110059<br>
+->Currently: Computer Science Student <br>
 
 Let's Connect!<br>
-💼 LinkedIn: [Om Kartike](https://www.linkedin.com/in/om-kartike)<br>
-🐙 GitHub: [@omkartike](https://github.com/omkartike)<br>
-📧 Email: omkartik2910@gmail.com ---->> alternate email<br>
+->💼 LinkedIn: [Om Kartike](https://www.linkedin.com/in/om-kartike)<br>
+->🐙 GitHub: [@omkartike](https://github.com/omkartike)<br>
+->📧 Email: omkartik2910@gmail.com ---->> alternate email<br>
 
 🎓 Google Gen AI Academy APAC Participant<br>
 
