@@ -14,23 +14,23 @@ A production-ready AI agent built with Google's Agent Development Kit (ADK) that
 </div>
 
 📖 Table of Contents
-Overview<br>
-Features<br>
-Architecture<br>
-Tech Stack<br>
-Project Structure<br>
-Prerequisites<br>
-Installation & Setup<br>
-Deployment Steps<br>
-How to Use<br>
-Testing<br>
-API Documentation<br>
-Screenshots<br>
-Troubleshooting<br>
-Future Enhancements<br>
-Credits & References<br>
-License<br>
-Contact<br>
+1->Overview<br>
+2->Features<br>
+3->Architecture<br>
+4->Tech Stack<br>
+5->Project Structure<br>
+6->Prerequisites<br>
+7->Installation & Setup<br>
+8->Deployment Steps<br>
+9->How to Use<br>
+10->Testing<br>
+11->API Documentation<br>
+12->Screenshots<br>
+13->Troubleshooting<br>
+14->Future Enhancements<br>
+15->Credits & References<br>
+16->License<br>
+17->Contact<br>
 
 🎯 Overview
 This project demonstrates the implementation of a single AI agent using Google's Agent Development Kit (ADK) that performs text summarization using the Gemini 2.5 Flash model. The agent is deployed on Google Cloud Run and is callable via an HTTP endpoint, returning valid responses for given text inputs.
