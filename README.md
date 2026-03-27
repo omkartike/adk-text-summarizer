@@ -61,23 +61,23 @@ This project demonstrates the implementation of a single AI agent using Google's
 | Simple capability           | ✅ Summarization (not complex logic)   |
 
 ✨ Features
-🧠 AI-Powered Summarization: Automatically condenses long text into concise, readable summaries
+🧠 AI-Powered Summarization: Automatically condenses long text into concise, readable summaries<br>
 
-⚡ Fast Response: Uses Gemini 2.5 Flash for minimal latency
+⚡ Fast Response: Uses Gemini 2.5 Flash for minimal latency<br>
 
-🌐 Serverless Deployment: Hosted on Google Cloud Run with auto-scaling
+🌐 Serverless Deployment: Hosted on Google Cloud Run with auto-scaling<br>
 
-🔌 HTTP REST API: Callable via standard HTTP POST requests
+🔌 HTTP REST API: Callable via standard HTTP POST requests<br>
 
-🖥️ Built-in Web UI: Includes ADK developer interface for easy testing
+🖥️ Built-in Web UI: Includes ADK developer interface for easy testing<br>
 
-🔐 Secure: Uses Google Cloud IAM and service accounts
+🔐 Secure: Uses Google Cloud IAM and service accounts<br>
 
-📦 Production-Ready: Containerized with Docker and proper IAM permissions
+📦 Production-Ready: Containerized with Docker and proper IAM permissions<br>
 
-🎓 Educational: Perfect for learning ADK, Cloud Run, and AI agent architecture
+🎓 Educational: Perfect for learning ADK, Cloud Run, and AI agent architecture<br>
 
-🏗️ Architecture
+🏗️ Architecture<br>
 ┌─────────────────┐     HTTP Request     ┌──────────────────┐
 │                 │  ──────────────────> │                  │
 │   Client /      │                      │   Google Cloud   │
@@ -96,10 +96,10 @@ This project demonstrates the implementation of a single AI agent using Google's
                                           └──────────────┘
 Flow Description-
 
-1) User sends HTTP POST request with text to summarize
-2)Cloud Run receives request and routes to ADK agent
-3)Agent processes text using Gemini model
-4)Summary is returned as JSON response
+1) User sends HTTP POST request with text to summarize<br>
+2)Cloud Run receives request and routes to ADK agent<br>
+3)Agent processes text using Gemini model<br>
+4)Summary is returned as JSON response<br>
 
 🛠️ Tech Stack
 | Component      | Technology        | Purpose                        |
@@ -115,13 +115,13 @@ Flow Description-
 | CI/CD          | Cloud Build       | Automated deployment           |
 
 📁 Production File Structure ->>>
-text_summarizer_agent/
-├── .env                      # Environment variables (API key, model)
-├── requirements.txt          # Python dependencies
-├── agent.py                  # Main ADK agent definition
-├── __init__.py              # Python package initializer
-└── Dockerfile               # Container configuration (optional)
-File Descriptions ->
+text_summarizer_agent/<br>
+├── .env                      # Environment variables (API key, model)<br>
+├── requirements.txt          # Python dependencies<br>
+├── agent.py                  # Main ADK agent definition<br>
+├── __init__.py              # Python package initializer<br>
+└── Dockerfile               # Container configuration (optional)<br>
+File Descriptions -><br>
 | File             | Description                                                             |
 | ---------------- | ----------------------------------------------------------------------- |
 | agent.py         | Defines the text summarization agent with Gemini model and instructions |
@@ -130,33 +130,33 @@ File Descriptions ->
 | Dockerfile       | Container definition for Cloud Run deployment                           |
 | __init__.py      | Makes the directory a Python package                                    |
 
-📋 Prerequisites
-Before running this project, ensure you have:
+📋 Prerequisites<br>
+Before running this project, ensure you have:<br>
 
-Required Accounts & Services
-✅ Google Account (personal, not work/school)
+Required Accounts & Services<br>
+✅ Google Account (personal, not work/school)<br>
 
-✅ Google Cloud Project with billing enabled
+✅ Google Cloud Project with billing enabled<br>
 
-✅ Google Cloud SDK (gcloud) installed on your machine
+✅ Google Cloud SDK (gcloud) installed on your machine<br>
 
-✅ Python 3.11+ installed
+✅ Python 3.11+ installed<br>
 
-🚀 Future Enhancements
-Potential improvements for future versions:
-Add support for multiple summarization styles (brief, detailed, bullet points)
-Implement text length-based routing (short vs. long texts)
-Add sentiment analysis alongside summarization
-Support file uploads (PDF, DOCX summarization)
-Implement caching for repeated texts
-Add usage analytics dashboard
-Multi-language summarization support
-Batch processing for multiple texts
-Integration with Google Drive/Docs
+🚀 Future Enhancements<br>
+Potential improvements for future versions:<br>
+Add support for multiple summarization styles (brief, detailed, bullet points)<br>
+Implement text length-based routing (short vs. long texts)<br>
+Add sentiment analysis alongside summarization<br>
+Support file uploads (PDF, DOCX summarization)<br>
+Implement caching for repeated texts<br>
+Add usage analytics dashboard<br>
+Multi-language summarization support<br>
+Batch processing for multiple texts<br>
+Integration with Google Drive/Docs<br>
 
-Now lets come to the commands section ->>>
+Now lets come to the commands section ->>><br>
 
-  🚀 Installation & Setup
+  🚀 Installation & Setup<br>
 Step 1: In Cloud terminal set up your project using following command ->
 ```bash
 gcloud config set project [PROJECT_ID]
