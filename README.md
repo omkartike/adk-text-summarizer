@@ -160,6 +160,29 @@ Required Accounts & Services<br>
 9->Batch processing for multiple texts<br>
 10->Integration with Google Drive/Docs<br>
 
+🚧 Problems I Faced 😭 -->><br>
+Building this wasn't all smooth sailing. Here's what tripped me up and how I fixed it:<br>
+
+-->❌ Problem 1: Dockerfile CMD Error<br>
+```bash
+CMD -> ["python", "-m", "google.adk.runner", "--app", "agent.root_agent"]
+```
+Error: ModuleNotFoundError: No module named 'google.adk.runner'<br>
+Solution: Ditched custom Dockerfile! Used adk deploy cloud_run command instead - it<br>
+
+-->❌ Problem 2: Agent Variable Naming<br>
+Error: My agent was named summarizer_agent but deployment failed.<br>
+Solution: Renamed to root_agent (ADK requirement for Cloud Run).<br>
+
+-->❌ Problem 3: Region Confusion<br>
+Error: Deployed to wrong region, slow responses from Delhi.<br>
+Solution: Switched to asia-south1 (closest to India).<br>
+
+-->❌ Problem 4: 403 Permission Denied<br>
+Error: Cloud Run couldn't call Gemini.<br>
+Solution: Added roles/aiplatform.user to service account.<br>
+Total debugging time: ~3 hours. Worth it! 💪<br>
+
 Now lets come to the commands section ->>><br>
 
   🚀 Installation & Setup<br>
