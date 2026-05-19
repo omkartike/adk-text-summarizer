@@ -1,0 +1,29 @@
+# Environment variables — NEVER commit real .env
+.env
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+*.DS_Store
+
+# Secrets
+*.key
+*.pem
+service-account*.json
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
